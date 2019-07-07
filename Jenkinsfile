@@ -14,7 +14,7 @@ pipeline {
         }
         stage('dockerization') {
             steps {
-                sh "docker pull nginx"
+                sh "docker pull nginx:latest"
                 sh "docker run -d -p 8085:80 -v /root/myapp-test:/usr/share/nginx/html"
             }
         }
